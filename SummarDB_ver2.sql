@@ -18,7 +18,7 @@ CREATE SCHEMA IF NOT EXISTS `summardb` DEFAULT CHARACTER SET utf8 ;
 USE `summardb` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Member`
+-- Table `summardb`.`User`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `summardb`.`User` ;
 
@@ -43,7 +43,7 @@ DROP TABLE IF EXISTS `summardb`.`Book` ;
 CREATE TABLE IF NOT EXISTS `summardb`.`Book` (
   `book_id` INT NOT NULL AUTO_INCREMENT,
   `book_title` VARCHAR(100) NOT NULL,
-  `book_author` VARCHAR(100) NOT NULL,
+  `book_author` VARCHAR(100) NULL,
   `book_company` VARCHAR(100) NULL,
   `book_image` BLOB NULL,
   PRIMARY KEY (`book_id`))
@@ -51,7 +51,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `summardb`.`Board`
+-- Table `summardb`.`Summary`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `summardb`.`Summary` ;
 
@@ -61,7 +61,6 @@ CREATE TABLE IF NOT EXISTS `summardb`.`Summary` (
   `content_title` VARCHAR(100) NOT NULL,
   `content` VARCHAR(1500) NOT NULL,
   `input_type` INT NOT NULL,
-  `suffix` INT NOT NULL,
   `book_id` INT NULL,
   PRIMARY KEY (`summary_id`),
   INDEX `user_id_IDX3` (`user_id` ASC) VISIBLE,
@@ -95,10 +94,10 @@ CREATE TABLE IF NOT EXISTS `summardb`.`Quiz` (
   `book_id` INT NOT NULL,
   `my_answer` VARCHAR(500) NULL,
   `correct_answer` VARCHAR(500) NOT NULL,
-  `correct` BOOLEAN NOT NULL,
+  `correct` BOOLEAN NULL,
   PRIMARY KEY (`quiz_id`),
   INDEX `book_id_IDX4` (`book_id` ASC) VISIBLE,
-  INDEX `user_id_IDX24` (`user_id` ASC) VISIBLE,
+  INDEX `user_id_IDX4` (`user_id` ASC) VISIBLE,
   INDEX `summary_id_IDX4` (`summary_id` ASC) VISIBLE,
   CONSTRAINT `quiz2user_user_id`
     FOREIGN KEY (`user_id`)
