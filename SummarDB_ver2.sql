@@ -39,8 +39,6 @@ CREATE TABLE IF NOT EXISTS `summardb`.`Book` (
   `book_id` INT NOT NULL AUTO_INCREMENT,
   `book_title` VARCHAR(100) NOT NULL,
   `book_author` VARCHAR(100) NULL,
-  `book_company` VARCHAR(100) NULL,
-  `book_image` BLOB NULL,
   PRIMARY KEY (`book_id`))
 ENGINE = InnoDB;
 
@@ -53,13 +51,14 @@ DROP TABLE IF EXISTS `summardb`.`Summary` ;
 CREATE TABLE IF NOT EXISTS `summardb`.`Summary` (
   `summary_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` VARCHAR(25) NOT NULL,
-  `content_title` VARCHAR(100) NOT NULL,
-  `content` VARCHAR(1500) NOT NULL,
+  `summary_title` VARCHAR(100) NOT NULL,
+  `bf_summary` VARCHAR(5000) NOT NULL,
+  `af_summary` VARCHAR(2000) NOT NULL,
   `input_type` INT NOT NULL,
   `book_id` INT NULL,
   PRIMARY KEY (`summary_id`),
   INDEX `user_id_IDX3` (`user_id` ASC) VISIBLE,
-  INDEX `content_title_IDX3` (`content_title` ASC) VISIBLE,
+  INDEX `summary_title_IDX3` (`summary_title` ASC) VISIBLE,
   INDEX `book_id_IDX3` (`book_id` ASC) VISIBLE,
   CONSTRAINT `summary2user_user_id`
     FOREIGN KEY (`user_id`)
