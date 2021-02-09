@@ -23,14 +23,9 @@ USE `summardb` ;
 DROP TABLE IF EXISTS `summardb`.`User` ;
 
 CREATE TABLE IF NOT EXISTS `summardb`.`User` (
-  `user_id` VARCHAR(25) NOT NULL,
+  `user_id` VARCHAR(40) NOT NULL,
   `password` VARCHAR(25) NOT NULL,
   `name` VARCHAR(10) NOT NULL,
-  `email` VARCHAR(50) NOT NULL,
-  `age` INT NULL,
-  `sex` INT NULL,
-  `tel` VARCHAR(15) NULL,
-  `major` VARCHAR(100) NULL,
   PRIMARY KEY (`user_id`))
 ENGINE = InnoDB;
 
