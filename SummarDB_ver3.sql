@@ -102,21 +102,14 @@ DROP TABLE IF EXISTS `summardb`.`Score` ;
 CREATE TABLE IF NOT EXISTS `summardb`.`Score` (
   `score_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` VARCHAR(25) NOT NULL,
-  `quiz_id` INT NOT NULL,
   `summary_id` INT NOT NULL,
   `score` INT NOT NULL,
   PRIMARY KEY (`score_id`),
   INDEX `user_id_idx5` (`user_id` ASC) VISIBLE,
-  INDEX `quiz_id_idx5` (`quiz_id` ASC) VISIBLE,
   INDEX `summary_id_idx5` (`summary_id` ASC) VISIBLE,
   CONSTRAINT `score2user_user_id`
     FOREIGN KEY (`user_id`)
-    REFERENCES `mydb`.`User` (`user_id`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE,
-  CONSTRAINT `score2quiz_quiz_id`
-    FOREIGN KEY (`quiz_id`)
-    REFERENCES `summardb`.`Quiz` (`quiz_id`)
+    REFERENCES `summardb`.`User` (`user_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `score2summary_summary_id`
@@ -125,7 +118,6 @@ CREATE TABLE IF NOT EXISTS `summardb`.`Score` (
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
