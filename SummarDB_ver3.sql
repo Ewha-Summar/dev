@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `summardb`.`User` ;
 
 CREATE TABLE IF NOT EXISTS `summardb`.`User` (
   `user_id` VARCHAR(40) NOT NULL,
-  `password` VARCHAR(25) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
   `name` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`user_id`))
 ENGINE = InnoDB;
@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS `summardb`.`Summary` (
   `summary_title` VARCHAR(100) NOT NULL,
   `bf_summary` VARCHAR(5000) NOT NULL,
   `af_summary` VARCHAR(2000) NOT NULL,
+  `count` INT NOT NULL,
   `input_type` INT NOT NULL,
   `book_title` VARCHAR(100) NULL,
   `book_author` VARCHAR(100) NULL,
