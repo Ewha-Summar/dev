@@ -10,10 +10,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema summardb
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema summardb
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `summardb` DEFAULT CHARACTER SET utf8 ;
 USE `summardb` ;
 
@@ -73,10 +69,14 @@ CREATE TABLE IF NOT EXISTS `summardb`.`Quiz` (
   `my_answer` VARCHAR(500) NULL,
   `correct_answer` VARCHAR(500) NOT NULL,
   `correct` BOOLEAN NULL,
+  `review_answer` VARCHAR(500) NULL,
+  `review_correct` BOOLEAN NULL,
+  `review_date` DATE NULL,
   PRIMARY KEY (`quiz_id`),
   INDEX `book_title_IDX3` (`book_title` ASC) VISIBLE,
   INDEX `user_id_IDX3` (`user_id` ASC) VISIBLE,
   INDEX `summary_id_IDX3` (`summary_id` ASC) VISIBLE,
+  INDEX `quiz_type_IDX3` (`quiz_type` ASC) VISIBLE,
   CONSTRAINT `quiz2user_user_id`
     FOREIGN KEY (`user_id`)
     REFERENCES `summardb`.`User` (`user_id`)
@@ -104,10 +104,13 @@ CREATE TABLE IF NOT EXISTS `summardb`.`Score` (
   `score_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` VARCHAR(25) NOT NULL,
   `summary_id` INT NOT NULL,
-  `score` INT NOT NULL,
+  `score` VARCHAR(20) NOT NULL,
+  `review_score` VARCHAR(20) NULL,
+  `quiz_type` INT NOT NULL,
   PRIMARY KEY (`score_id`),
   INDEX `user_id_idx5` (`user_id` ASC) VISIBLE,
   INDEX `summary_id_idx5` (`summary_id` ASC) VISIBLE,
+  INDEX `quiz_type_idx5` (`quiz_type` ASC) VISIBLE,
   CONSTRAINT `score2user_user_id`
     FOREIGN KEY (`user_id`)
     REFERENCES `summardb`.`User` (`user_id`)
@@ -117,7 +120,13 @@ CREATE TABLE IF NOT EXISTS `summardb`.`Score` (
     FOREIGN KEY (`summary_id`)
     REFERENCES `summardb`.`Summary` (`summary_id`)
     ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `score2quiz_quiz_type`
+    FOREIGN KEY (`quiz_type`)
+    REFERENCES `summardb`.`Quiz` (`quiz_type`)
+    ON DELETE CASCADE
     ON UPDATE CASCADE)
+  
 ENGINE = InnoDB;
 
 SET SQL_MODE=@OLD_SQL_MODE;
