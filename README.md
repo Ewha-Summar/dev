@@ -1,5 +1,12 @@
 ## 문서 요약을 통한 질의 집중적 학습 도움 서비스 *Summar*
 
+* *Summar* Github Organization 링크
+  * https://github.com/Ewha-Summar
+* *Summar* Github Repository 링크
+  * 전반적인 개발 : https://github.com/Ewha-Summar/dev
+  * 프론트 앤드 : https://github.com/Ewha-Summar/front
+  * 백 앤드 : https://github.com/Ewha-Summar/server
+
 ### 1) *Summar*란?
 : 문서 요약을 통한 질의 집중적 학습 도움 서비스
 1. 문서 입력 : 사용자가 요약을 원하는 문서를 입력
