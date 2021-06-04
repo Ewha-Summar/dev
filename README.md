@@ -15,11 +15,8 @@
 - https://ewha-summar.github.io/front/
 
 ### 4) *Summar*의 목적
-최근 untact 시대가 도래되며 혼자서 공부를 하는 사람들이 증가함에 따른 학습 도움 서비스의 필요성이 대두되고 있다.
-하지만 많은 사람들이 각자 다른 분야의 공부를 하는데에 도움을 줄 수 있는 서비스는 많지가 않다. 문서를 요약해주거나 퀴즈를 만들어주는 서비스는 몇몇 있지만, 한글을 지원하지 않거나 자동으로 문제를 생성해주지 않는다는 한계점이 있었다.
-
-시작하기에 앞서 코로나로 언택트 시대가 도래하면서, 혼자 공부하는 사람이 증가하였습니다. 하지만, 한국어를 제공하는 서비스는 많지않았고, 한국어 제공을 한다고 하여도, 학습의 질이 낮거나 단순하여 도움이 전혀 안되는 상황이었습니다. 또한, 인공지능이 발전하면서 교육에 도입하려는 시도가 굉장히 많았지만, 기술적으로 어려운 난이도 때문에 현재까지 인공지능을 이용한 교육서비스가 시중에 많이 없습니다. 따라서 저희는 언택트 시대에 학생들이 스스로 공부할 수 있는 한국어 학습 도움 서비스인 Summar를 제작하였습니다.  
-따라서 많은 사람들이 더 다양한 학습 자료들로 효율적으로 공부할 수 있는 질의 집중적 학습 도움 서비스 *Summar*를 개발하고자 한다.
+COVID-19로 언택트 시대가 도래하면서, 혼자 공부하는 사람이 증가하였다. 하지만, 한국어를 제공하는 서비스는 많지않았고, 한국어 제공을 한다고 하여도, 학습의 질이 낮거나 단순하여 도움이 크게 되지 않았다. 또한, 인공지능이 발전하면서 교육에 도입하려는 시도가 굉장히 많았지만, 기술적으로 어려운 난이도 때문에 현재까지 인공지능을 이용한 교육 서비스가 시중에 많이 없다.
+따라서 언택트 시대에 학생들이 스스로 공부할 수 있는 한국어 학습 도움 서비스인 *Summar*를 제작했다.
 
 ### 5) System 구조도 & Database schema
 - System 구조도
@@ -28,19 +25,18 @@
 
 - Database schema
 
-![db](https://user-images.githubusercontent.com/66114269/101778429-31392200-3b37-11eb-9384-8ba32ad5ff28.png)
 ![그림1](https://user-images.githubusercontent.com/66114269/120765774-812bfb00-c554-11eb-9a67-f3151eac1e0f.png)
 
 
 ### 6) 기술블로그 소개
-- 정아연 https://yeon-code.tistory.com/28
-  : Summar project의 개요와 text rank, 형태소분석에 대한 기술설명
-- 최윤재 https://enjoy-studying.tistory.com/17
-  : 한국어 텍스트에 대한 TextRank 과정을 설명
-- 정하늘 https://hneul-dvlp.tistory.com/6
-  : 워드 임베딩과 이를 이용한 TextRank 및 초기 성능 평가
-- 김지운 https://jeewoon98.tistory.com/3
-  : TextRank와 형태소 분석 결과 분석
+- 정아연 https://yeon-code.tistory.com/48
+  : TextRank를 이용해서 요약하기
+- 최윤재 https://enjoy-studying.tistory.com/37
+  : TextRank 기반으로 요약문 생성하기, 빈칸문제 만들기
+- 정하늘 https://hneul-dvlp.tistory.com/8
+  : 워드 임베딩을 이용한 한글 문서 추출 요약 및 빈칸 문제 생성
+- 김지운 https://jeewoon98.tistory.com/4
+  : TextRank와 한국어 문서 요약
   
 
 ### 7) Reference
