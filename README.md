@@ -24,12 +24,13 @@
 ### 5) System 구조도 & Database schema
 - System 구조도
 
-![system구조](https://user-images.githubusercontent.com/66114269/101778175-dbfd1080-3b36-11eb-979d-662ae505e0ef.png)
 <img width="485" alt="KakaoTalk_20210604_150817864" src="https://user-images.githubusercontent.com/66114269/120763334-124da280-c552-11eb-9ea4-9244919a15e0.png">
 
 - Database schema
 
 ![db](https://user-images.githubusercontent.com/66114269/101778429-31392200-3b37-11eb-9384-8ba32ad5ff28.png)
+![그림1](https://user-images.githubusercontent.com/66114269/120765774-812bfb00-c554-11eb-9a67-f3151eac1e0f.png)
+
 
 ### 6) 기술블로그 소개
 - 정아연 https://yeon-code.tistory.com/28
