@@ -27,6 +27,11 @@ COVID-19로 언택트 시대가 도래하면서, 혼자 공부하는 사람이 �
 
 ![그림1](https://user-images.githubusercontent.com/66114269/120765774-812bfb00-c554-11eb-9a67-f3151eac1e0f.png)
 
+### 6) 기술 소개
+1. 문서 요약
+<img width="320" alt="캡처" src="https://user-images.githubusercontent.com/66114269/120769549-34e2ba00-c558-11eb-87a1-9bff4c6e4964.PNG">
+
+2. 
 
 ### 6) 기술블로그 소개
 - 정아연 https://yeon-code.tistory.com/48
