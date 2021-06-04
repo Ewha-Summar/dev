@@ -27,11 +27,16 @@ COVID-19로 언택트 시대가 도래하면서, 혼자 공부하는 사람이 �
 
 ![그림1](https://user-images.githubusercontent.com/66114269/120765774-812bfb00-c554-11eb-9a67-f3151eac1e0f.png)
 
-### 6) 기술 소개
+### 6) 핵심 기술 소개
 1. 문서 요약
 <img width="320" alt="캡처" src="https://user-images.githubusercontent.com/66114269/120769549-34e2ba00-c558-11eb-87a1-9bff4c6e4964.PNG">
 
-2. 
+2. 빈칸문제 생성
+<img width="241" alt="222" src="https://user-images.githubusercontent.com/66114269/120769740-60fe3b00-c558-11eb-9448-117bcb1d5a18.PNG">
+
+3. 질의응답
+<img width="241" alt="3333" src="https://user-images.githubusercontent.com/66114269/120769880-85f2ae00-c558-11eb-923a-4b29c2299e78.PNG">
+
 
 ### 6) 기술블로그 소개
 - 정아연 https://yeon-code.tistory.com/48
