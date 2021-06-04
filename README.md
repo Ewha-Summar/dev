@@ -25,6 +25,7 @@
 - System 구조도
 
 ![system구조](https://user-images.githubusercontent.com/66114269/101778175-dbfd1080-3b36-11eb-979d-662ae505e0ef.png)
+<img width="485" alt="KakaoTalk_20210604_150817864" src="https://user-images.githubusercontent.com/66114269/120763334-124da280-c552-11eb-9ea4-9244919a15e0.png">
 
 - Database schema
 
